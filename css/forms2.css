@@ -1,0 +1,96 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Motserrat', sans-serif;
+}
+body{
+    
+    background-color:#EFFDF5 ;
+}
+.container-fluid{
+    
+    max-width: 1320px !important;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+/*     box-shadow: rgba(210, 209, 209, 0.8) 0 -10px 18px, rgba(210, 209, 209, 0.8) 0 1px 2px, rgba(210, 209, 209, 0.8) 0 2px 4px, rgba(210, 209, 209, 0.8) 0 4px 8px, rgba(210, 209, 209, 0.8) 0 8px 16px, rgba(210, 209, 209, 0.8) 0 16px 32px; */
+.card{
+    border-radius: 20px;
+    border-radius: 100px;
+    box-shadow: rgba(210, 209, 209, 0.29) 0 -10px 18px, rgba(210, 209, 209, 0.29) 0 1px 2px, rgba(210, 209, 209, 0.29) 0 2px 4px, rgba(210, 209, 209, 0.29) 0 4px 8px, rgba(210, 209, 209, 0.29) 0 8px 16px, rgba(210, 209, 209, 0.29) 0 16px 32px;    margin: 2em auto 0;
+    padding: 5px 20px;
+    text-decoration: none;
+    transition: all 250ms;
+}
+/* Card-logo */
+.card .card-logo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+}
+.card .card-logo .inner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card-logo .inner-logo .logo-icon{
+    padding: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF ;
+    border-radius: 50px;
+    border: 1px dashed #00B98E;
+    margin-right: 5px;
+}
+.card-logo .inner-logo .logo-text{
+    font-weight: 700;
+    margin: 0;
+}
+/* Card-logo End */
+/* Card-Header */
+.card-header h2{
+    font-size: 35px;
+}
+/* Card-Header End*/
+/* Card-body */
+
+.card-body .form-group{
+   margin-bottom: 5px;
+  
+}
+.card-body .inner-button{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.card-body .btn-back{
+    margin-top: 25px;
+    margin-right: 0;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #18bc9c;
+    border-color: #18bc9c;
+    
+}
+.card-body .btn-success{
+    margin-top: 25px;
+    margin-right: 0;
+    margin-bottom: 17px;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
+}
+.card-body .form-group .form-control{
+    border: 1px solid #00B98E;
+}
+.card-body .form-group label{
+    font-size: 17px;
+}
+/* Card-body End*/

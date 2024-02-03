@@ -1,0 +1,446 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th10 23, 2023 lúc 01:10 PM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.0.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Cơ sở dữ liệu: `thuexemain`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `datxe`
+--
+
+CREATE TABLE `datxe` (
+  `DatXeID` int(11) NOT NULL,
+  `KhachHangID` int(11) DEFAULT NULL,
+  `XeID` int(11) DEFAULT NULL,
+  `NgayDat` date DEFAULT NULL,
+  `NgayNhanXe` date DEFAULT NULL,
+  `NgayTraXe` date DEFAULT NULL,
+  `TrangThai` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `datxe`
+--
+
+INSERT INTO `datxe` (`DatXeID`, `KhachHangID`, `XeID`, `NgayDat`, `NgayNhanXe`, `NgayTraXe`, `TrangThai`) VALUES
+(22, 7, 15, '2023-11-12', '2023-11-13', '2023-11-15', 'Hoàn Thành'),
+(23, 1, 13, '2023-11-12', '2023-11-14', '2023-11-17', 'Hoàn thành'),
+(25, 1, 19, '2023-11-12', '2023-11-14', '2023-11-15', 'Hoàn thành'),
+(27, 3, 20, '2023-11-12', '2023-11-14', '2023-11-16', 'Hoàn Thành'),
+(28, 7, 20, '2023-11-12', '2023-11-14', '2023-11-16', 'Hoàn Thành'),
+(29, 10, 22, '2023-11-12', '2023-11-13', '2023-11-15', 'Hoàn Thành'),
+(30, 3, 13, '2023-11-17', '2023-11-23', '2023-11-30', 'Hoàn Thành'),
+(31, 11, 13, '2023-11-18', '2023-11-20', '2023-11-30', 'Hoàn Thành'),
+(32, 3, 19, '2023-11-18', '2023-11-19', '2023-11-29', 'Hoàn Thành'),
+(33, 6, 13, '2023-11-18', '2023-11-20', '2023-11-25', 'Hoàn Thành'),
+(37, 6, 15, '2023-11-19', '2023-11-21', '2023-11-29', 'Hoàn Thành'),
+(41, 17, 15, '2023-11-19', '2023-11-20', '2023-11-23', 'Hoàn Thành'),
+(42, 4, 22, '2023-11-19', '2023-11-24', '2023-11-25', 'Hoàn Thành'),
+(43, 8, 17, '2023-11-23', '2023-11-24', '2023-11-25', 'Hoàn Thành');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `hoadon`
+--
+
+CREATE TABLE `hoadon` (
+  `HoaDonID` int(11) NOT NULL,
+  `HopDongID` int(11) DEFAULT NULL,
+  `NgayLapHoaDon` date DEFAULT NULL,
+  `TongTien` decimal(10,2) DEFAULT NULL,
+  `DaThanhToan` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `hoadon`
+--
+
+INSERT INTO `hoadon` (`HoaDonID`, `HopDongID`, `NgayLapHoaDon`, `TongTien`, `DaThanhToan`) VALUES
+(33, 58, '2023-11-18', 2200000.00, 2200000.00),
+(34, 59, '2023-11-20', 6000000.00, 6000000.00),
+(35, 60, '2023-11-21', 1800000.00, 1800000.00),
+(36, 61, '2023-11-20', 50000.00, 50000.00),
+(37, 62, '2023-11-19', 800000.00, 800000.00),
+(38, 63, '2023-11-24', 2000.00, 2000.00);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `hopdong`
+--
+
+CREATE TABLE `hopdong` (
+  `HopDongID` int(11) NOT NULL,
+  `DatXeID` int(11) DEFAULT NULL,
+  `NgayLapHopDong` date DEFAULT NULL,
+  `DiaDiemNhanXe` varchar(100) DEFAULT NULL,
+  `DiaDiemTraXe` varchar(100) DEFAULT NULL,
+  `TienCoc` decimal(10,0) DEFAULT NULL,
+  `TienConLai` decimal(10,0) DEFAULT NULL,
+  `trangthaihopdong` char(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `hopdong`
+--
+
+INSERT INTO `hopdong` (`HopDongID`, `DatXeID`, `NgayLapHopDong`, `DiaDiemNhanXe`, `DiaDiemTraXe`, `TienCoc`, `TienConLai`, `trangthaihopdong`) VALUES
+(48, 22, '2023-11-13', 'xdfcgvbhj', 'drfghj', 300000, 300000, 'Hoàn Thành'),
+(49, 23, '2023-11-14', 'fgbfvds', 'gfed', 2000000, 0, 'Hoàn Thành'),
+(50, 25, '2023-11-14', 'tgrwfed', 'grfweqdw', 200000, 0, 'Hoàn Thành'),
+(51, 27, '2023-11-14', 'cgvhbjn', 'cgvhb', 300000, 0, 'Hoàn Thành'),
+(52, 28, '2023-11-14', 'CGVHBJ', 'CG VBHN', 300000, 0, 'Hoàn Thành'),
+(53, 29, '2023-11-13', 'rgefwdq', 'rbfgvds', 37500, 0, 'Hoàn Thành'),
+(54, 30, '2023-11-17', 'dsd', 'ssdsdsddsdsdsd', 111111, 55555, 'Đã đóng 50%'),
+(55, 30, '2023-11-17', 'dsd', 'ssdsdsddsdsdsd', 111111, 55555, 'Đã đóng 50%'),
+(56, 31, '0000-00-00', 'fcgvhbjn', 'dcfgvbhjn', 5500000, 0, 'Hoàn Thành'),
+(57, 30, '2023-11-23', 'gcvhb', 'c gvhbj', 4000000, 4000000, 'Đã đóng 50%'),
+(58, 32, '2023-11-18', 'ádvf', 'aádfbgh', 1100000, 0, 'Hoàn Thành'),
+(59, 33, '2023-11-20', 'sdcfrgb', 'qưdefgrth', 3000000, 0, 'Hoàn Thành'),
+(60, 37, '2023-11-21', 'gh', 'vgh', 900000, 0, 'Hoàn Thành'),
+(61, 42, '2023-11-20', 'jkhgdfsz túa', 'nbhv', 25000, 0, 'Hoàn Thành'),
+(62, 41, '2023-11-19', 'nhbgv', 'mnbhv', 400000, 0, 'Hoàn Thành'),
+(63, 43, '2023-11-24', 'jhbgfcg', 'kjhgfc', 1000, 0, 'Hoàn Thành');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `khachhang`
+--
+
+CREATE TABLE `khachhang` (
+  `KhachHangID` int(11) NOT NULL,
+  `HoTen` varchar(100) NOT NULL,
+  `CMND` varchar(20) NOT NULL,
+  `BLX` varchar(20) DEFAULT NULL,
+  `CoQuan` varchar(100) DEFAULT NULL,
+  `Email` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `khachhang`
+--
+
+INSERT INTO `khachhang` (`KhachHangID`, `HoTen`, `CMND`, `BLX`, `CoQuan`, `Email`) VALUES
+(1, 'Trần Văn Minh', '100', '111', '74 HoangHoaTham', 'minh@gmail.com'),
+(2, 'Louis Pham', '111', '100', '888 Su vạn Hạnh', 'phat@gmail.com'),
+(3, 'Nghiep', '111', '1111', '222 Truong Trinh', '@gamil.com'),
+(4, 'minh23', '12121', '111', '111', 'minh@gmail.com'),
+(5, 'cgfvhjk465789', '5432', 'cgfvbhj', 'dfghjk', 'bartoletti.jaylin@example.org'),
+(6, 'dgfhjk tryuik', '3546789', 'cgfhjkl', 'xfcghj', 'camtu098@gmail.com'),
+(7, 'camtuuu', '45678', 'hgjk', 'vhgj', 'camtu098@gmail.com'),
+(8, 'ctttt tú', '56789', 'cgvhbjnm', 'fghjk', 'bartoletti.jaylin@example.org'),
+(9, 'CGVBHJN TÚ', '56789', 'GFCVHB', 'FCGVBHJN', '21DH112125@st.huflit.edu.vn'),
+(10, 'DCFGVHJB TUUUU', '56789', 'XDCFVGHBJNM', 'CFVGBHJN', 'MNSGYVUHJH@gmail.com'),
+(11, 'aaaaa hbj', '987654346789', 'fgcvbhn', 'hvbjn', 'admin@gmail.com'),
+(12, 'fchbjnk', '657890', 'xdfcvyghj', 'dxfcgvbhjnk', 'admin@gmail.com'),
+(13, 'trương tú', '657890', 'jh', 'kjhg', 'jkhg@gmai.com'),
+(14, 'fghj', '56789', 'fgh', 'vg', 'admin@gmail.com'),
+(15, 'bgjnkm,', '8987656', '3fewd', '2ewq', 'camtu098@gmail.com'),
+(16, 'njbhv tu', '54376543', 'hvbj', 'jkb', 'admin@gmail.com'),
+(17, 'tao', '3456789', 'fcgvhjbk', 'gcfh', 'MNSBCIH@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `loaixe`
+--
+
+CREATE TABLE `loaixe` (
+  `LoaiXeID` int(11) NOT NULL,
+  `TenLoaiXe` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `loaixe`
+--
+
+INSERT INTO `loaixe` (`LoaiXeID`, `TenLoaiXe`) VALUES
+(1, 'SUV'),
+(2, 'Xe 30 chỗ'),
+(3, 'Xe mercedes'),
+(4, 'Xe porsche'),
+(5, 'dxgcfhjbkn gfhjk'),
+(6, 'DCFGBHJ FCVGBHNJ'),
+(7, 'drsxfgtchbj'),
+(8, 'dẻgt'),
+(9, 'aaaa'),
+(10, 'sadfsưdefrgh'),
+(11, 'mnjhgfd');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `soxe`
+--
+
+CREATE TABLE `soxe` (
+  `SoXeID` int(11) NOT NULL,
+  `XeID` int(11) DEFAULT NULL,
+  `NgayThue` date DEFAULT NULL,
+  `NgayTra` date DEFAULT NULL,
+  `HopDongID` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `soxe`
+--
+
+INSERT INTO `soxe` (`SoXeID`, `XeID`, `NgayThue`, `NgayTra`, `HopDongID`) VALUES
+(75, 13, '2023-11-14', '2023-11-17', 49),
+(76, 13, '2023-11-14', '2023-11-17', 49),
+(77, 13, '2023-11-14', '2023-11-17', 49),
+(78, 22, '2023-11-13', '2023-11-15', 53),
+(79, 13, '2023-11-14', '2023-11-14', 49),
+(80, 19, '2023-11-14', '2023-11-14', 50),
+(81, 19, '2023-11-14', '2023-11-14', 50),
+(82, 13, '2023-11-14', '2023-11-14', 49),
+(83, 20, '2023-11-14', '2023-11-16', 52),
+(84, 13, '2023-11-20', '2023-11-30', 56),
+(85, 19, '2023-11-19', '2023-11-29', 58),
+(86, 13, '2023-11-20', '2023-11-25', 59),
+(87, 15, '2023-11-21', '2023-11-29', 60),
+(88, 22, '2023-11-24', '2023-11-25', 61),
+(89, 15, '2023-11-20', '2023-11-23', 62),
+(90, 17, '2023-11-24', '2023-11-25', 63);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `taikhoannhanvien`
+--
+
+CREATE TABLE `taikhoannhanvien` (
+  `TaiKhoanID` int(11) NOT NULL,
+  `TenDangNhap` varchar(20) NOT NULL,
+  `MatKhau` varchar(50) NOT NULL,
+  `role` tinyint(1) NOT NULL COMMENT '1:admin\r\n2:user\r\n'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `taikhoannhanvien`
+--
+
+INSERT INTO `taikhoannhanvien` (`TaiKhoanID`, `TenDangNhap`, `MatKhau`, `role`) VALUES
+(1, 'camtu123', 'camtu123', 1),
+(5, 'áãdfrg', 'ádfgb', 1),
+(6, 'aaaaa', 'aaaaa', 2),
+(7, 'jkhugtf', 'kljhg', 2),
+(8, 'tu123', 'tu123', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `xe`
+--
+
+CREATE TABLE `xe` (
+  `XeID` int(11) NOT NULL,
+  `LoaiXeID` int(11) DEFAULT NULL,
+  `TenXe` char(50) DEFAULT NULL,
+  `AnhXe` char(200) DEFAULT NULL,
+  `TinhTrangXe` varchar(50) DEFAULT NULL,
+  `GiaXe` decimal(10,0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `xe`
+--
+
+INSERT INTO `xe` (`XeID`, `LoaiXeID`, `TenXe`, `AnhXe`, `TinhTrangXe`, `GiaXe`) VALUES
+(13, 1, 'xe tú', 'https://scr.vn/wp-content/uploads/2020/07/%E1%BA%A2nh-si%C3%AAu-xe-Lamborghini.jpg', 'Đã đặt trước', 1000000),
+(15, 2, 'xe 2', 'https://th.bing.com/th/id/R.10aa27b4cfffdfb991ab1c11908a97f3?rik=F%2fqq8%2froK0Tu2w&pid=ImgRaw&r=0', 'Có sẵn', 200000),
+(17, 3, 'xe 3', 'https://th.bing.com/th/id/R.10aa27b4cfffdfb991ab1c11908a97f3?rik=F%2fqq8%2froK0Tu2w&pid=ImgRaw&r=0', 'Có sẵn', 1000),
+(19, 3, 'xe 4', 'https://scr.vn/wp-content/uploads/2020/07/%E1%BA%A2nh-si%C3%AAu-xe-Lamborghini.jpg', 'Đã đặt trước', 200000),
+(20, 1, 'xe 5', 'https://scr.vn/wp-content/uploads/2020/07/%E1%BA%A2nh-si%C3%AAu-xe-Lamborghini.jpg', 'Đã đặt trước', 200000),
+(21, 1, 'xe 7777', 'https://th.bing.com/th/id/R.10aa27b4cfffdfb991ab1c11908a97f3?rik=F%2fqq8%2froK0Tu2w&pid=ImgRaw&r=0', 'Đã đặt trước', 60000),
+(22, 1, 'XÍCH LÔ', 'https://th.bing.com/th/id/R.9b1fe701e98f20769c43dc590f2686e0?rik=8w1vPNv1XxT6sw&pid=ImgRaw&r=0', 'Có sẵn', 25000),
+(23, 1, 'kkakakakagvhbj', 'https://scr.vn/wp-content/uploads/2020/07/%E1%BA%A2nh-si%C3%AAu-xe-Lamborghini.jpg', 'Có sẵn', 2000000),
+(24, 4, 'wdfgtrhyuj ttttt', 'https://scr.vn/wp-content/uploads/2020/07/%E1%BA%A2nh-si%C3%AAu-xe-Lamborghini.jpg', 'Có sẵn', 987656);
+
+--
+-- Bẫy `xe`
+--
+DELIMITER $$
+CREATE TRIGGER `Xe_BeforeInsert` BEFORE INSERT ON `xe` FOR EACH ROW BEGIN
+    DECLARE new_XeID INT;
+    SET new_XeID = (SELECT AUTO_INCREMENT 
+                    FROM information_schema.TABLES 
+                    WHERE TABLE_SCHEMA = 'appthuexe' 
+                    AND TABLE_NAME = 'Xe');
+    SET NEW.XeID = CONCAT('X', LPAD(new_XeID, 3, '0'));
+END
+$$
+DELIMITER ;
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `datxe`
+--
+ALTER TABLE `datxe`
+  ADD PRIMARY KEY (`DatXeID`),
+  ADD KEY `KhachHangID` (`KhachHangID`),
+  ADD KEY `XeID` (`XeID`);
+
+--
+-- Chỉ mục cho bảng `hoadon`
+--
+ALTER TABLE `hoadon`
+  ADD PRIMARY KEY (`HoaDonID`),
+  ADD KEY `HopDongID` (`HopDongID`);
+
+--
+-- Chỉ mục cho bảng `hopdong`
+--
+ALTER TABLE `hopdong`
+  ADD PRIMARY KEY (`HopDongID`),
+  ADD KEY `DatXeID` (`DatXeID`);
+
+--
+-- Chỉ mục cho bảng `khachhang`
+--
+ALTER TABLE `khachhang`
+  ADD PRIMARY KEY (`KhachHangID`);
+
+--
+-- Chỉ mục cho bảng `loaixe`
+--
+ALTER TABLE `loaixe`
+  ADD PRIMARY KEY (`LoaiXeID`);
+
+--
+-- Chỉ mục cho bảng `soxe`
+--
+ALTER TABLE `soxe`
+  ADD PRIMARY KEY (`SoXeID`),
+  ADD KEY `XeID` (`XeID`),
+  ADD KEY `HopDongID` (`HopDongID`);
+
+--
+-- Chỉ mục cho bảng `taikhoannhanvien`
+--
+ALTER TABLE `taikhoannhanvien`
+  ADD PRIMARY KEY (`TaiKhoanID`);
+
+--
+-- Chỉ mục cho bảng `xe`
+--
+ALTER TABLE `xe`
+  ADD PRIMARY KEY (`XeID`),
+  ADD KEY `LoaiXeID` (`LoaiXeID`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `datxe`
+--
+ALTER TABLE `datxe`
+  MODIFY `DatXeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT cho bảng `hoadon`
+--
+ALTER TABLE `hoadon`
+  MODIFY `HoaDonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+
+--
+-- AUTO_INCREMENT cho bảng `hopdong`
+--
+ALTER TABLE `hopdong`
+  MODIFY `HopDongID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+
+--
+-- AUTO_INCREMENT cho bảng `khachhang`
+--
+ALTER TABLE `khachhang`
+  MODIFY `KhachHangID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT cho bảng `loaixe`
+--
+ALTER TABLE `loaixe`
+  MODIFY `LoaiXeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT cho bảng `soxe`
+--
+ALTER TABLE `soxe`
+  MODIFY `SoXeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+
+--
+-- AUTO_INCREMENT cho bảng `taikhoannhanvien`
+--
+ALTER TABLE `taikhoannhanvien`
+  MODIFY `TaiKhoanID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT cho bảng `xe`
+--
+ALTER TABLE `xe`
+  MODIFY `XeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `datxe`
+--
+ALTER TABLE `datxe`
+  ADD CONSTRAINT `datxe_ibfk_1` FOREIGN KEY (`KhachHangID`) REFERENCES `khachhang` (`KhachHangID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `datxe_ibfk_2` FOREIGN KEY (`XeID`) REFERENCES `xe` (`XeID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `hoadon`
+--
+ALTER TABLE `hoadon`
+  ADD CONSTRAINT `hoadon_ibfk_1` FOREIGN KEY (`HopDongID`) REFERENCES `hopdong` (`HopDongID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `hopdong`
+--
+ALTER TABLE `hopdong`
+  ADD CONSTRAINT `hopdong_ibfk_1` FOREIGN KEY (`DatXeID`) REFERENCES `datxe` (`DatXeID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `soxe`
+--
+ALTER TABLE `soxe`
+  ADD CONSTRAINT `soxe_ibfk_1` FOREIGN KEY (`XeID`) REFERENCES `xe` (`XeID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `soxe_ibfk_2` FOREIGN KEY (`HopDongID`) REFERENCES `hopdong` (`HopDongID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `xe`
+--
+ALTER TABLE `xe`
+  ADD CONSTRAINT `xe_ibfk_1` FOREIGN KEY (`LoaiXeID`) REFERENCES `loaixe` (`LoaiXeID`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

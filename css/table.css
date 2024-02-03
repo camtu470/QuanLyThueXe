@@ -1,0 +1,30 @@
+table,
+th,
+td {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    padding: 12px;
+}
+
+th {
+    background-color: rgb(209, 231, 221);
+    color: black;
+    border: 1px solid rgb(209, 231, 221);
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.5s;
+}
+
+table {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Chỉnh kích thước và đường viền của ảnh trong bảng */
+
+table img {
+    width: 300px;
+    /* Điều chỉnh kích thước ảnh */
+}
