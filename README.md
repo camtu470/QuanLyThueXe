@@ -17,7 +17,7 @@ Bất kỳ loại xe nào bạn cần, từ các mẫu xe tiết kiệm nhiên l
 <h4>Tối Ưu Hóa Quản Lý:</h4> Quản lý xe ,Khách hàng,lịch đặt xe, hợp đồng thuê xe với giao diện thân thiện và quản lý thông tin chi tiết.</h4>
 <h4>Tìm Kiếm Nhanh Chóng:</h4>  Đa dạng các tùy chọn tìm kiếm để tìm sách và độc giả một cách nhanh chóng và hiệu quả.</h4>
 <h4>Hệ thống phân loại:</h4> Cho phép phân loại xe theo nhiều tiêu chí như loại xe, tình trạng xe.</h4>
-<h4>Tính năng đặt lịch thuê xe, có tính toán chi phí thuê xe dựa trên các tiêu chí người dùng chọn</h4>
+<h4>Tính năng đặt lịch thuê xe :</h4> có tính toán chi phí thuê xe dựa trên các tiêu chí người dùng chọn
 <h4>Giao diện tương tác dễ dàng:</h4> Giao diện hệ thống độc đáo, tương tác với người dùng lâu dài mà không làm người dùng khó chịu, mang đến cảm giác dễ chịu khi làm việc.</h4>
 
 <h2>Hướng phát triển</h2>
@@ -41,8 +41,7 @@ Trong thời gian sắp tới, nếu như có cơ hội, em sẽ cố gắng ph�
 <img width="916" alt="image" src="https://github.com/camtu470/Nhom3_QuanLyThuVien_T6_Ca2/assets/147785554/455cc954-ad4a-4f91-8956-c0d891401eeb">
 
 <h3>Giao diện danh sách quản lý</h3>
-
-![image](https://github.com/camtu470/QuanLyThueXe/assets/147785554/812de706-0ca7-48c3-bd49-29738a3a8849)
+<img width="916" alt="image" src="https://github.com/camtu470/QuanLyThueXe/assets/147785554/812de706-0ca7-48c3-bd49-29738a3a8849">
 
 <h3>Giao diện đặt lịch thuê xe</h3>
 ![image](https://github.com/camtu470/QuanLyThueXe/assets/147785554/018353e6-04ea-4ef5-b10a-8dfa7da173e3)
