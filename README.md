@@ -33,16 +33,26 @@ Trong thời gian sắp tới, nếu như có cơ hội, em sẽ cố gắng ph�
 
 <h2>🚀Giao diện</h2>
 <h3>Giao diện admin quản lý thuê xe </h3>
+![image](https://github.com/camtu470/QuanLyThueXe/assets/147785554/1ca00f5b-db0c-45d7-9f1c-427138687324)
 
-![image](https://github.com/camtu470/Nhom3_QuanLyThuVien_T6_Ca2/assets/147785899/8c54a3d6-8692-496b-8013-bb0519146456)
 
 <h3>Giao diện Admin</h3>
 
 <img width="916" alt="image" src="https://github.com/camtu470/Nhom3_QuanLyThuVien_T6_Ca2/assets/147785554/455cc954-ad4a-4f91-8956-c0d891401eeb">
 
+<h3>Giao diện danh sách quản lý</h3>
 
-<h3>Giao diện nhập liệu</h3>
-<img width="902" alt="image" src="https://github.com/camtu470/Nhom3_QuanLyThuVien_T6_Ca2/assets/147785554/3a3f5f97-ccd2-47c9-8fc2-4ddbee17c52a">
+![image](https://github.com/camtu470/QuanLyThueXe/assets/147785554/812de706-0ca7-48c3-bd49-29738a3a8849)
+
+<h3>Giao diện đặt lịch thuê xe</h3>
+![image](https://github.com/camtu470/QuanLyThueXe/assets/147785554/018353e6-04ea-4ef5-b10a-8dfa7da173e3)
+
+<h3>Giao diện lập hợp đồng thuê xe</h3>
+![image](https://github.com/camtu470/QuanLyThueXe/assets/147785554/a8ba871a-f408-4ce7-a882-4838156a897f)
+
+<h3>Giao diện trang khách hàng sử dụng</h3>
+![image](https://github.com/camtu470/QuanLyThueXe/assets/147785554/9f1e54a5-cea0-4446-a6c8-0b4d57dde4cf)
+
 
 
 
